@@ -4,6 +4,7 @@ class FileData {
     this.lastModified = params.lastModified
     this.size = params.size
     this.extname = params.extname
+    this.type = params.type
   }
 }
 
