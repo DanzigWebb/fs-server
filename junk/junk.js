@@ -8,7 +8,9 @@ const blacklist = [
 	'^\\.key',
 	'^\\.localized',
 	'^\\.gitignore$',
-	
+	'^\\.dockerignore',
+	'^\\.prettierrc',
+
 	'^\\.DS_Store$', 
 	'^\\.AppleDouble$', 
 	'^\\.LSOverride$', 

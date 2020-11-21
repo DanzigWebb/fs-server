@@ -2,9 +2,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors');
 // router handlers
-const scanDir = require('./routes/scanDir')
-const deleteFile = require('./routes/deleteFile')
 const fakeAuth = require('./routes/auth/fake/auth')
+const scanDir = require('./routes/fs/scanDir')
+const deleteFile = require('./routes/fs/deleteFile')
 
 
 const app = express()
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors());
 app.options('*', cors());
 
-const port = 3000
+const port = 3001
 
 // Routes
 // Auth

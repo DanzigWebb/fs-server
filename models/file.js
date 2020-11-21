@@ -10,8 +10,14 @@ class FileData {
 
 class FileResponseData {
   constructor(params) {
-    this.list = params.list
+    this.list = FileResponseData.sort(params.list)
     this.path = params.path
+  }
+
+  static sort(list) {
+    const folders = list.filter(file => file.type === 'folder')
+    const withoutFolders = list.filter(file => !(file.type === 'folder'))
+    return [...folders, ...withoutFolders]
   }
 }
 

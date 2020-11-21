@@ -1,10 +1,10 @@
 const path = require('path')
 const fs = require('fs')
 const mime = require('mime')
+const junk = require('../../junk/junk')
+const {FileResponseData} = require('../../models/file')
+const {FileData} = require('../../models/file')
 
-const junk = require('../junk/junk')
-const {FileResponseData} = require('../models/file')
-const {FileData} = require('../models/file')
 
 function scanDir(req, res) {
 
