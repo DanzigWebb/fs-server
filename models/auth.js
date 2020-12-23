@@ -1,7 +1,8 @@
 class AuthResponse {
   constructor(params) {
     this.token = params.token
-    this.userName = params.userName
+    this.login = params.login
+    this.role = params.role
   }
 }
 

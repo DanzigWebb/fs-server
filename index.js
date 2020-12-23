@@ -5,6 +5,7 @@ const cors = require('cors');
 const fakeAuth = require('./routes/auth/fake/auth')
 const scanDir = require('./routes/fs/scanDir')
 const deleteFile = require('./routes/fs/deleteFile')
+const getConfig = require('./routes/core/core')
 
 
 const app = express()
@@ -22,6 +23,8 @@ app.post('/authorization', fakeAuth)
 // File system
 app.post('/files', scanDir)
 app.delete('/files', deleteFile)
+// Config
+app.get('/getConfig', getConfig)
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
